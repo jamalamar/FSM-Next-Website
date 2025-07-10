@@ -1,7 +1,7 @@
 export type Spirit = {
   id: number;
   name: string;
-  category: 'Tequila' | 'Mezcal' | 'Whisky' | 'Ron' | 'Ginebra';
+  category: 'Tequila' | 'Mezcal' | 'Whisky' | 'Ron' | 'Ginebra' | 'Vermouth' | 'Seltzer' | 'Vodka' | 'Spirit' | 'Liqueur';
   brand: string;
   origin: string;
   tastingNotes: string;
@@ -95,6 +95,21 @@ export const spirits: Spirit[] = [
 ];
 
 export const brands: Brand[] = [
+  { name: 'Kensei', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Templeton', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Conde de Cuba', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Zaya', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Carlo Alberto', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Otto\'s Athens Vermouth', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Gin MG', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Hard Saints', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Nobushi', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Tovaritch!', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Mezcal Guerrero Maya', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Chilcuague', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Seventeen', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Skinos', logoUrl: 'https://placehold.co/200x100.png' },
+  { name: 'Mezcal Guerrero Maya', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Casa Agave Real', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Espíritus Ancestrales', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Destilería del Norte', logoUrl: 'https://placehold.co/200x100.png' },
@@ -120,5 +135,25 @@ export const team: TeamMember[] = [
   },
 ];
 
-export const spiritCategories = ['Tequila', 'Mezcal', 'Whisky', 'Ron', 'Ginebra'];
-export const spiritBrands = ['Casa Agave Real', 'Espíritus Ancestrales', 'Destilería del Norte', 'Cañaveral Mágico', 'El Alambique Inglés'];
+export const spiritCategories = ['Tequila', 'Mezcal', 'Whisky', 'Ron', 'Ginebra', 'Vermouth', 'Seltzer', 'Vodka', 'Spirit', 'Liqueur'];
+export const spiritBrands = [
+  'Kensei',
+  'Templeton',
+  'Conde de Cuba',
+  'Zaya',
+  'Carlo Alberto',
+  'Otto\'s Athens Vermouth',
+  'Gin MG',
+  'Hard Saints',
+  'Nobushi',
+  'Tovaritch!',
+  'Mezcal Guerrero Maya',
+  'Chilcuague',
+  'Seventeen',
+  'Skinos',
+  'Casa Agave Real', 
+  'Espíritus Ancestrales', 
+  'Destilería del Norte', 
+  'Cañaveral Mágico', 
+  'El Alambique Inglés'
+];

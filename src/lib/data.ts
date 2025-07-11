@@ -181,7 +181,6 @@ export const brands: Brand[] = [
   { name: 'Chilcuague', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Seventeen', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Skinos', logoUrl: 'https://placehold.co/200x100.png' },
-  { name: 'Mezcal Guerrero Maya', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Casa Agave Real', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Espíritus Ancestrales', logoUrl: 'https://placehold.co/200x100.png' },
   { name: 'Destilería del Norte', logoUrl: 'https://placehold.co/200x100.png' },

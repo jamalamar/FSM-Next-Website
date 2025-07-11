@@ -16,7 +16,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { handleContactForm } from './actions';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const formSchema = z.object({
@@ -25,6 +24,12 @@ const formSchema = z.object({
   subject: z.string().min(5, { message: 'El asunto debe tener al menos 5 caracteres.' }),
   message: z.string().min(10, { message: 'El mensaje debe tener al menos 10 caracteres.' }).max(500),
 });
+
+const encode = (data: any) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
 
 export function ContactForm() {
   const { toast } = useToast();
@@ -40,19 +45,24 @@ export function ContactForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const result = await handleContactForm(values);
-    if (result.success) {
-      toast({
-        title: '¡Mensaje Enviado!',
-        description: 'Gracias por contactarnos. Te responderemos a la brevedad.',
-      });
-      form.reset();
-    } else {
-      toast({
-        variant: 'destructive',
-        title: 'Error al enviar',
-        description: result.error || 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.',
-      });
+    try {
+        await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...values })
+        });
+        
+        toast({
+            title: '¡Mensaje Enviado!',
+            description: 'Gracias por contactarnos. Te responderemos a la brevedad.',
+        });
+        form.reset();
+    } catch (error) {
+        toast({
+            variant: 'destructive',
+            title: 'Error al enviar',
+            description: 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.',
+        });
     }
   }
 
@@ -63,7 +73,16 @@ export function ContactForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          {/* Netlify Forms: The form needs a name, data-netlify, and a hidden input */}
+          <form 
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={form.handleSubmit(onSubmit)} 
+            className="space-y-6"
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <FormField
               control={form.control}
               name="name"

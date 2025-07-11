@@ -26,7 +26,7 @@ export default function SobreNosotrosPage() {
           <div>
             <Image
               src="https://placehold.co/800x600.png"
-              alt="Equipo de Fraternity Spirits"
+              alt="Equipo de Fraternity Spirits en una reunión"
               width={800}
               height={600}
               className="rounded-lg shadow-md"
@@ -34,12 +34,12 @@ export default function SobreNosotrosPage() {
             />
           </div>
           <div className="prose prose-lg max-w-none text-muted-foreground">
-            <h2 className="font-headline text-3xl font-bold text-foreground mb-4">Nuestra Historia</h2>
+            <h2 className="font-headline text-3xl font-bold text-foreground mb-4">Nuestra Pasión</h2>
             <p>
-              Fundada en 2015 por un grupo de amigos apasionados por los espirituosos, Fraternity Spirits nació del deseo de compartir tesoros líquidos poco conocidos con el mercado mexicano. Creemos que cada botella cuenta una historia: de su tierra, de su gente y de su tradición.
+              Fraternity Spirits México es un negocio familiar dedicado a la importación y distribución de destilados premium. Nuestra misión es conectar marcas de prestigio mundial con los paladares más exigentes de México, creando un puente entre la tradición y la innovación.
             </p>
             <p>
-              Nuestra misión es ser más que una distribuidora; somos curadores, educadores y, sobre todo, una comunidad que celebra el arte de la destilación. Seleccionamos cuidadosamente cada marca en nuestro portafolio, asegurando que cumpla con nuestros estándares de calidad, autenticidad y pasión.
+              Nos enfocamos en la calidad, la autenticidad y la celebración de las tradiciones destiladoras. Nos hemos consolidado como un actor clave en la escena de bebidas premium del país, ofreciendo una experiencia curada y única para verdaderos entusiastas.
             </p>
           </div>
         </div>

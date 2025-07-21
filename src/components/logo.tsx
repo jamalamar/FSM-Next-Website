@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type LogoProps = {
   className?: string;
@@ -7,8 +8,15 @@ type LogoProps = {
 
 export default function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={cn('text-xl font-bold font-headline text-foreground tracking-wider', className)}>
-      Fraternity Spirits
+    <Link href="/" className={cn('block', className)}>
+      <Image 
+        src="/logos/FSlogo.png" 
+        alt="Fraternity Spirits México"
+        width={150}
+        height={60}
+        className="h-12 w-auto"
+        priority
+      />
     </Link>
   );
 }

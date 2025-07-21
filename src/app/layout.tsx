@@ -71,6 +71,13 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
+        {/* Hidden form for Netlify Forms detection */}
+        <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="text" name="subject" />
+          <textarea name="message"></textarea>
+        </form>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

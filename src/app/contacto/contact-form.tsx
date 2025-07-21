@@ -25,6 +25,11 @@ const formSchema = z.object({
   message: z.string().min(10, { message: 'El mensaje debe tener al menos 10 caracteres.' }).max(500),
 });
 
+const encode = (data: Record<string, string>) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 export function ContactForm() {
   const { toast } = useToast();
@@ -41,15 +46,11 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-        const response = await fetch("/api/contact", {
+        await fetch("/", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(values)
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...values })
         });
-        
-        if (!response.ok) {
-            throw new Error('Error al enviar el formulario');
-        }
         
         toast({
             title: '¡Mensaje Enviado!',
@@ -73,9 +74,12 @@ export function ContactForm() {
       <CardContent>
         <Form {...form}>
           <form 
+            name="contact"
+            method="POST"
             onSubmit={form.handleSubmit(onSubmit)} 
             className="space-y-6"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <FormField
               control={form.control}
               name="name"

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fraternity Spirits | La Mejor Distribuidora de Alcohol Premium en México',
     description: 'Distribuidora líder de destilados premium en México. Marcas exclusivas de tequila, mezcal, whisky y más. Entrega nacional.',
-    url: 'https://fraternityspirits.mx',
+    url: 'https://fraternityspiritsmexico.com',
     siteName: 'Fraternity Spirits México',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://fraternityspirits.mx',
+    canonical: 'https://fraternityspiritsmexico.com',
   },
 };
 

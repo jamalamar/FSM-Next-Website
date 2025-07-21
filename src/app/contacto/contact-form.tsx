@@ -25,11 +25,6 @@ const formSchema = z.object({
   message: z.string().min(10, { message: 'El mensaje debe tener al menos 10 caracteres.' }).max(500),
 });
 
-const encode = (data: any) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-}
 
 export function ContactForm() {
   const { toast } = useToast();
@@ -46,11 +41,15 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-        await fetch("/", {
+        const response = await fetch("/api/contact", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...values })
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(values)
         });
+        
+        if (!response.ok) {
+            throw new Error('Error al enviar el formulario');
+        }
         
         toast({
             title: '¡Mensaje Enviado!',
@@ -73,16 +72,10 @@ export function ContactForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          {/* Netlify Forms: The form needs a name, data-netlify, and a hidden input */}
           <form 
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={form.handleSubmit(onSubmit)} 
             className="space-y-6"
           >
-            <input type="hidden" name="form-name" value="contact" />
             <FormField
               control={form.control}
               name="name"

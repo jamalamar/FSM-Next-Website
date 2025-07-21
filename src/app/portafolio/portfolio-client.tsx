@@ -95,6 +95,14 @@ export default function PortfolioClient({ spirits, categories, brands }: Portfol
                 <CardContent className="p-4 flex-grow">
                   <p className="text-sm text-primary font-semibold">{spirit.brand}</p>
                   <CardTitle className="text-lg font-bold text-foreground mt-1">{spirit.name}</CardTitle>
+                  <p className="text-sm text-muted-foreground mt-2">{spirit.category} • {spirit.origin}</p>
+                  {(spirit.alcoholVolume || spirit.presentation) && (
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {spirit.alcoholVolume && <span>{spirit.alcoholVolume} Alc.</span>}
+                      {spirit.alcoholVolume && spirit.presentation && ' • '}
+                      {spirit.presentation && <span>{spirit.presentation}</span>}
+                    </p>
+                  )}
                 </CardContent>
                 <CardFooter className="p-4 pt-0">
                     <DialogTrigger asChild>
@@ -121,8 +129,10 @@ export default function PortfolioClient({ spirits, categories, brands }: Portfol
                     <div className="prose prose-sm">
                       <p><strong>Categoría:</strong> {spirit.category}</p>
                       <p><strong>Origen:</strong> {spirit.origin}</p>
-                      <h4 className="font-semibold text-foreground">Notas de Cata</h4>
-                      <p>{spirit.tastingNotes}</p>
+                      {spirit.alcoholVolume && <p><strong>Contenido de Alcohol:</strong> {spirit.alcoholVolume}</p>}
+                      {spirit.presentation && <p><strong>Presentación:</strong> {spirit.presentation}</p>}
+                      <h4 className="font-semibold text-foreground mt-4">Notas de Cata</h4>
+                      <p className="text-sm leading-relaxed">{spirit.tastingNotes}</p>
                     </div>
                   </div>
                 </div>

@@ -171,7 +171,7 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold">
                     <Link href="/portafolio">Ver Portafolio</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary hover:bg-primary-foreground/10 hover:text-primary-foreground">
                     <Link href="/contacto">Contáctanos</Link>
                 </Button>
             </div>

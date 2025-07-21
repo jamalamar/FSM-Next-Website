@@ -29,7 +29,7 @@ export default function ContactoPage() {
             <div className="space-y-4 mt-8">
               <div className="flex items-center gap-4">
                 <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
-                <span>Av. de los Insurgentes Sur 123, Piso 4, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX</span>
+                <span>12 de julio de 1859 No. 1056, Av. Leyes de Reforma 3a, Sección Alc, Iztapalapa, 09310 Ciudad de México, CDMX</span>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="w-6 h-6 text-primary flex-shrink-0" />
@@ -37,7 +37,7 @@ export default function ContactoPage() {
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-6 h-6 text-primary flex-shrink-0" />
-                <a href="tel:+525512345678" className="hover:text-primary no-underline">+52 55 1234 5678</a>
+                <a href="tel:+525512345678" className="hover:text-primary no-underline">+52 55 5600 0509</a>
               </div>
             </div>
           </div>

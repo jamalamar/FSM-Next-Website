@@ -30,7 +30,7 @@ export default function Home() {
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://images.pexels.com/photos/28180102/pexels-photo-28180102.jpeg"
           alt="Botellas de destilados en un bar"
           fill
           className="object-cover"
@@ -42,7 +42,7 @@ export default function Home() {
             El Arte de los Destilados Premium
           </h1>
           <p className="max-w-3xl text-lg md:text-xl text-gray-200 mb-8">
-            Fraternity Spirits te invita a explorar un mundo de sabores únicos y tradiciones ancestrales a través de nuestra curada selección.
+            Fraternity Spirits te invita a explorar un mundo de sabores únicos y tradiciones a través de nuestra curada selección.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
             <Link href="/portafolio">

@@ -25,7 +25,7 @@ export default function SobreNosotrosPage() {
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <Image
-              src="https://placehold.co/800x600.png"
+              src="/FSmap.jpg"
               alt="Equipo de Fraternity Spirits en una reunión"
               width={800}
               height={600}

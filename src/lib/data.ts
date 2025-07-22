@@ -44,61 +44,61 @@ export const spirits: Spirit[] = [
     alcoholVolume: '46.4%',
     presentation: '700 ml'
   },
-  {
-    id: 3,
-    name: 'Tequila Rosaluz Cristalino',
-    category: 'Tequila',
-    brand: 'Rosaluz',
-    origin: 'Jalisco, México',
-    tastingNotes: "Inspirado en las aguas más profundas y esmeralda más allá de la orilla. Cristalino es un tequila de notable pureza y claridad. El tono verde refleja la renovación y la serena fuerza de las profundidades del océano, perfecto para un disfrute tranquilo y consciente.",
-    imageUrl: '/FSMproduct3.png',
-    alcoholVolume: '40%',
-    presentation: '700ml'
-  },
-  {
-    id: 4,
-    name: 'Tequila Rosaluz Blanco',
-    category: 'Tequila',
-    brand: 'Rosaluz',
-    origin: 'Jalisco, México',
-    tastingNotes: "Una expresión vibrante del océano claro y bañado por el sol, Blanco encarna la frescura y la claridad. El tono azul Tiffany refleja la superficie tranquila del mar y el brillo del cielo al mediodía, convirtiéndolo en el compañero ideal para momentos que se sienten llenos de vida y posibilidades.",
-    imageUrl: '/FSMproduct4.png',
-    alcoholVolume: '40%',
-    presentation: '700ml'
-  },
-  {
-    id: 5,
-    name: 'Tequila Rosaluz Reposado',
-    category: 'Tequila',
-    brand: 'Rosaluz',
-    origin: 'Jalisco, México',
-    tastingNotes: "Reposado refleja la calidez y el resplandor del final de la tarde, cuando el sol proyecta una luz dorada. Esta expresión de tono ámbar captura la energía y el calor del comienzo de la noche, impregnando cada sorbo con el espíritu de la transformación, mientras el día comienza a fundirse con la noche.",
-    imageUrl: '/FSMproduct5.png',
-    alcoholVolume: '40%',
-    presentation: '700ml'
-  },
-  {
-    id: 6,
-    name: 'Tequila Rosaluz Añejo',
-    category: 'Tequila',
-    brand: 'Rosaluz',
-    origin: 'Jalisco, México',
-    tastingNotes: "Añejo honra los tonos intensos y majestuosos del atardecer, cuando el cielo se transforma en matices más profundos. Con su elegante botella color púrpura, Añejo está diseñado para momentos que invitan a la reflexión y la conexión, encarnando la riqueza del anochecer y la profundidad de la belleza natural.",
-    imageUrl: '/FSMproduct6.png',
-    alcoholVolume: '40%',
-    presentation: '700ml'
-  },
-  {
-    id: 7,
-    name: 'Tequila Rosaluz Rosado',
-    category: 'Tequila',
-    brand: 'Rosaluz',
-    origin: 'Jalisco, México',
-    tastingNotes: "Rosado es el corazón de Rosaluz, la culminación de un día costero perfecto, capturado en un delicado cristal rosado con base de madera. Esta expresión representa el cálido abrazo del atardecer, ofreciendo una experiencia lujosa y con arraigo, tan elegante como atemporal.",
-    imageUrl: '/FSMproduct7.png',
-    alcoholVolume: '40%',
-    presentation: '700ml'
-  },
+  // {
+  //   id: 3,
+  //   name: 'Tequila Rosaluz Cristalino',
+  //   category: 'Tequila',
+  //   brand: 'Rosaluz',
+  //   origin: 'Jalisco, México',
+  //   tastingNotes: "Inspirado en las aguas más profundas y esmeralda más allá de la orilla. Cristalino es un tequila de notable pureza y claridad. El tono verde refleja la renovación y la serena fuerza de las profundidades del océano, perfecto para un disfrute tranquilo y consciente.",
+  //   imageUrl: '/FSMproduct3.png',
+  //   alcoholVolume: '40%',
+  //   presentation: '700ml'
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Tequila Rosaluz Blanco',
+  //   category: 'Tequila',
+  //   brand: 'Rosaluz',
+  //   origin: 'Jalisco, México',
+  //   tastingNotes: "Una expresión vibrante del océano claro y bañado por el sol, Blanco encarna la frescura y la claridad. El tono azul Tiffany refleja la superficie tranquila del mar y el brillo del cielo al mediodía, convirtiéndolo en el compañero ideal para momentos que se sienten llenos de vida y posibilidades.",
+  //   imageUrl: '/FSMproduct4.png',
+  //   alcoholVolume: '40%',
+  //   presentation: '700ml'
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Tequila Rosaluz Reposado',
+  //   category: 'Tequila',
+  //   brand: 'Rosaluz',
+  //   origin: 'Jalisco, México',
+  //   tastingNotes: "Reposado refleja la calidez y el resplandor del final de la tarde, cuando el sol proyecta una luz dorada. Esta expresión de tono ámbar captura la energía y el calor del comienzo de la noche, impregnando cada sorbo con el espíritu de la transformación, mientras el día comienza a fundirse con la noche.",
+  //   imageUrl: '/FSMproduct5.png',
+  //   alcoholVolume: '40%',
+  //   presentation: '700ml'
+  // },
+  // {
+  //   id: 6,
+  //   name: 'Tequila Rosaluz Añejo',
+  //   category: 'Tequila',
+  //   brand: 'Rosaluz',
+  //   origin: 'Jalisco, México',
+  //   tastingNotes: "Añejo honra los tonos intensos y majestuosos del atardecer, cuando el cielo se transforma en matices más profundos. Con su elegante botella color púrpura, Añejo está diseñado para momentos que invitan a la reflexión y la conexión, encarnando la riqueza del anochecer y la profundidad de la belleza natural.",
+  //   imageUrl: '/FSMproduct6.png',
+  //   alcoholVolume: '40%',
+  //   presentation: '700ml'
+  // },
+  // {
+  //   id: 7,
+  //   name: 'Tequila Rosaluz Rosado',
+  //   category: 'Tequila',
+  //   brand: 'Rosaluz',
+  //   origin: 'Jalisco, México',
+  //   tastingNotes: "Rosado es el corazón de Rosaluz, la culminación de un día costero perfecto, capturado en un delicado cristal rosado con base de madera. Esta expresión representa el cálido abrazo del atardecer, ofreciendo una experiencia lujosa y con arraigo, tan elegante como atemporal.",
+  //   imageUrl: '/FSMproduct7.png',
+  //   alcoholVolume: '40%',
+  //   presentation: '700ml'
+  // },
   {
     id: 8,
     name: 'Mezcal Guerrero Maya Joven',
@@ -202,7 +202,7 @@ export const spirits: Spirit[] = [
 
 export const brands: Brand[] = [
   { name: 'Nobushi', logoUrl: '/logos/logo6.png' },
-  { name: 'Rosaluz', logoUrl: '/logos/logo1.png' },
+  // { name: 'Rosaluz', logoUrl: '/logos/logo1.png' }, **Temporaliry disabled**
   { name: 'Guerrero Maya', logoUrl: '/logos/logo2.png' },
   { name: 'Otto\'s', logoUrl: '/logos/logo7.png' },
   { name: 'Gin MG', logoUrl: '/logos/logo5.png' },

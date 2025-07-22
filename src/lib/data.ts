@@ -233,7 +233,7 @@ export const spiritCategories = ['Whisky', 'Tequila', 'Mezcal', 'Vermouth', 'Gin
 
 export const spiritBrands = [
   'Nobushi',
-  'Rosaluz',
+  // 'Rosaluz',
   'Guerrero Maya',
   'Otto\'s',
   'Gin MG',

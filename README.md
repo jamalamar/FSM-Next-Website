@@ -1,4 +1,4 @@
-# Fraternity Spirits México - Sitio Web Oficial
+# Fraternity Spirits México - Sitio Web Oficial con Next.js
 
 Sitio web corporativo para Fraternity Spirits, la distribuidora líder de destilados premium en México.
 

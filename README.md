@@ -86,4 +86,4 @@ Todo el sitio está en español mexicano, optimizado para el mercado local.
 
 ## 📄 Licencia
 
-© 2024 Fraternity Spirits México. Todos los derechos reservados.
+© 2025 Fraternity Spirits México. Todos los derechos reservados.

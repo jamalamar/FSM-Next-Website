@@ -213,19 +213,19 @@ export const brands: Brand[] = [
 
 export const team: TeamMember[] = [
   {
-    name: 'Juan Pérez',
+    name: 'Raffaele Berardi',
+    role: 'Fundador',
+    imageUrl: 'https://media.licdn.com/dms/image/v2/D4E03AQF9E9nR2p4s6g/profile-displayphoto-shrink_200_200/B4EZZtKjNKHEAY-/0/1745588205396?e=2147483647&v=beta&t=MRD3IBn0U-7LzScgKcuczadoiDOgA1znJLfv-mxDXHE',
+  },
+  {
+    name: 'Rafael Berardi',
     role: 'Director General',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://instagram.fcvj4-1.fna.fbcdn.net/v/t51.29350-15/345744633_145663121694885_3429100582504881339_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQuaW1hZ2VfdXJsZ2VuLjEyNDF4MTIzNi5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UuYzIifQ&_nc_ht=instagram.fcvj4-1.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2QGwbvvP3kqncSrnSOZ5fQmCf5aMK7LlqiKJE3gyWOu1AKJVCm3--1bUlMlfRNLinAXG3Ho_KXd6HHX34ZUHDS5N&_nc_ohc=EUaLbYV0-ZEQ7kNvwEYqraW&_nc_gid=o3EhQEiWq16HHQ9sGlHahA&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzA5NzQ5Mzk0NTkyNDI0MTQ0Nw%3D%3D.3-ccb7-5&oh=00_AfXVnLJI7w06_YgGS-c_PjfPmF9_xrqb1xWQO5Uh4jckUg&oe=6898A9DD&_nc_sid=7a9f4b',
   },
   {
-    name: 'María García',
-    role: 'Directora de Marcas',
-    imageUrl: 'https://placehold.co/400x400.png',
-  },
-  {
-    name: 'Carlos Rodríguez',
-    role: 'Gerente de Ventas',
-    imageUrl: 'https://placehold.co/400x400.png',
+    name: 'Gianni Berardi',
+    role: 'Estratega de Marca',
+    imageUrl: 'https://media.licdn.com/dms/image/v2/C4E03AQElzcejMe138w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1643019410348?e=2147483647&v=beta&t=E-R4Cm3HK9QYQ6LaU9f4MV9aj8HnnmDGTlcjs8d-8II',
   },
 ];
 

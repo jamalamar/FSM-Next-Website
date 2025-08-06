@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
-              Distribuidora de destilados premium.
+              Desde 2015, curando experiencias excepcionales en destilados premium para conocedores mexicanos.
             </p>
           </div>
           <div>
@@ -34,11 +34,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-foreground">Síguenos</h3>
             <div className="flex items-center space-x-4 mt-4">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/fraternityspiritsmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://mx.linkedin.com/company/fraternity-spirits-mexico" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </a>
@@ -47,6 +47,17 @@ export default function Footer() {
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {currentYear} Fraternity Spirits. Todos los derechos reservados.</p>
+          <p className="mt-2">
+            Hecho por{' '}
+            <a 
+              href="https://digihoriz.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:text-primary/80 transition-colors font-medium"
+            >
+              DigiHoriz
+            </a>
+          </p>
         </div>
       </div>
     </footer>

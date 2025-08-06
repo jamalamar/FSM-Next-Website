@@ -67,9 +67,12 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline text-2xl">Envíanos un Mensaje</CardTitle>
+    <Card className="shadow-lg border-border/50">
+      <CardHeader className="pb-4">
+        <CardTitle className="font-headline text-2xl text-foreground">Envíanos un Mensaje</CardTitle>
+        <p className="text-sm text-muted-foreground mt-2">
+          Completa el formulario y nos pondremos en contacto contigo a la brevedad.
+        </p>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -80,40 +83,55 @@ export function ContactForm() {
             className="space-y-6"
           >
             <input type="hidden" name="form-name" value="contact" />
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nombre Completo</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Tu nombre" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Correo Electrónico</FormLabel>
-                  <FormControl>
-                    <Input placeholder="tu@correo.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <div className="grid md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-semibold text-foreground">Nombre Completo *</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="Tu nombre completo" 
+                        {...field} 
+                        className="border-border/50 focus:border-primary transition-colors"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-semibold text-foreground">Correo Electrónico *</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="tu@correo.com" 
+                        type="email"
+                        {...field} 
+                        className="border-border/50 focus:border-primary transition-colors"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Asunto</FormLabel>
+                  <FormLabel className="text-sm font-semibold text-foreground">Asunto *</FormLabel>
                   <FormControl>
-                    <Input placeholder="Asunto de tu mensaje" {...field} />
+                    <Input 
+                      placeholder="¿En qué podemos ayudarte?" 
+                      {...field} 
+                      className="border-border/50 focus:border-primary transition-colors"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -124,22 +142,47 @@ export function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Mensaje</FormLabel>
+                  <div className="flex items-center justify-between">
+                    <FormLabel className="text-sm font-semibold text-foreground">Mensaje *</FormLabel>
+                    <span className="text-xs text-muted-foreground">
+                      {field.value?.length || 0}/500
+                    </span>
+                  </div>
                   <FormControl>
                     <Textarea
-                      placeholder="Escribe tu mensaje aquí..."
-                      className="resize-none"
-                      rows={5}
+                      placeholder="Compártenos los detalles de tu consulta o interés en nuestros destilados..."
+                      className="resize-none border-border/50 focus:border-primary transition-colors min-h-[120px]"
+                      rows={6}
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Cuéntanos sobre tus preferencias o necesidades específicas para ofrecerte la mejor asesoría.
+                  </p>
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
-              {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
-            </Button>
+            <div className="pt-4 border-t border-border/30">
+              <Button 
+                type="submit" 
+                className="w-full button-premium" 
+                disabled={form.formState.isSubmitting}
+                size="lg"
+              >
+                {form.formState.isSubmitting ? (
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                    Enviando mensaje...
+                  </div>
+                ) : (
+                  'Enviar Mensaje'
+                )}
+              </Button>
+              <p className="text-xs text-muted-foreground text-center mt-3">
+                * Campos obligatorios. Tu información será tratada de forma confidencial.
+              </p>
+            </div>
           </form>
         </Form>
       </CardContent>

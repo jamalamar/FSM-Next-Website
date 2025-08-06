@@ -3,8 +3,15 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contacto | Fraternity Spirits',
-  description: 'Ponte en contacto con Fraternity Spirits. Estamos aquí para responder tus preguntas y atender tus necesidades.',
+  title: 'Contacto - Distribuidor de Destilados Premium México | Fraternity Spirits',
+  description: 'Contáctanos para distribución de destilados premium en México. Atendemos restaurantes, bares y hoteles en CDMX. Cotizaciones personalizadas y asesoría especializada en tequila, mezcal y whisky.',
+  keywords: 'contacto distribuidor destilados México, cotización spirits México, proveedor licores restaurantes, distribuidor tequila CDMX, importador whisky México contacto',
+  openGraph: {
+    title: 'Contacto - Distribuidor Premium de Destilados México',
+    description: 'Contáctanos para distribución especializada de destilados premium. Atendemos restaurantes y bares en toda la República Mexicana.',
+    url: 'https://fraternityspiritsmexico.com/contacto',
+    images: ['/logos/FSlogo.png'],
+  },
 };
 
 export default function ContactoPage() {

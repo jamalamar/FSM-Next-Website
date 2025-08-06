@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fraternityspirits.com/sitemap.xml
+
+# Specific crawling guidelines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Premium spirits content - prioritize crawling
+Allow: /portafolio
+Allow: /sobre-nosotros
+Allow: /contacto
+
+# Crawl delay for better server performance
+Crawl-delay: 1

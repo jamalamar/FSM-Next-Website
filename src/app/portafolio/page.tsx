@@ -1,10 +1,18 @@
 import { spirits, spiritCategories, spiritBrands } from '@/lib/data';
 import PortfolioClient from './portfolio-client';
+import { BusinessStructuredData, ProductStructuredData } from '@/components/structured-data';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portafolio | Fraternity Spirits',
-  description: 'Explora nuestro portafolio de tequilas, mezcales, whiskies y más. Filtra por categoría y marca para encontrar tu próximo destilado favorito.',
+  title: 'Portafolio de Destilados Premium - Tequila, Mezcal, Whisky | Fraternity Spirits México',
+  description: 'Descubre nuestro catálogo exclusivo de destilados premium en México: tequilas artesanales, mezcales únicos, whiskies japoneses, ginebras europeas. Marcas selectas para restaurantes y bares premium.',
+  keywords: 'portafolio destilados México, catálogo tequila premium, mezcal artesanal México, whisky japonés México, ginebra premium, spirits catálogo, destilados restaurantes México',
+  openGraph: {
+    title: 'Portafolio de Destilados Premium México - Fraternity Spirits',
+    description: 'Catálogo exclusivo de tequilas, mezcales, whiskies y ginebras premium para restaurantes y bares en México.',
+    url: 'https://fraternityspiritsmexico.com/portafolio',
+    images: ['/logos/FSlogo.png'],
+  },
 };
 
 export default function PortafolioPage() {
@@ -12,7 +20,10 @@ export default function PortafolioPage() {
   const allSpirits = spirits;
 
   return (
-    <div className="bg-background text-foreground">
+    <>
+      <BusinessStructuredData page="portfolio" />
+      <ProductStructuredData />
+      <div className="bg-background text-foreground">
       <header className="py-16 md:py-24 text-center relative overflow-hidden">
         {/* Premium background with subtle pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-background"></div>
@@ -62,6 +73,7 @@ export default function PortafolioPage() {
           brands={spiritBrands}
         />
       </main>
-    </div>
+      </div>
+    </>
   );
 }

@@ -4,8 +4,15 @@ import { team, brands } from '@/lib/data';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros | Fraternity Spirits',
-  description: 'Conoce la historia, el equipo y los valores de Fraternity Spirits, tu distribuidora de confianza en destilados premium.',
+  title: 'Sobre Nosotros - La Mejor Distribuidora de Destilados Premium en México | Fraternity Spirits',
+  description: 'Conoce la historia de la familia Berardi y Fraternity Spirits México. Desde 2015 somos líderes en importación y distribución de destilados premium: tequila, mezcal, whisky y ginebra para el mercado mexicano.',
+  keywords: 'historia Fraternity Spirits México, familia Berardi destilados, distribuidora premium México historia, importadores tequila México, empresa familiar spirits México',
+  openGraph: {
+    title: 'Sobre Fraternity Spirits México - Distribuidores Premium desde 2015',
+    description: 'La historia de la familia Berardi y su pasión por los destilados premium en México. Líderes en distribución para restaurantes y bares.',
+    url: 'https://fraternityspiritsmexico.com/sobre-nosotros',
+    images: ['/logos/FSlogo.png'],
+  },
 };
 
 

@@ -4,6 +4,44 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Star, Quote, Award, Users, GraduationCap, Truck } from 'lucide-react';
 import { brands, spirits } from '@/lib/data';
+import { BusinessStructuredData } from '@/components/structured-data';
+import { FAQStructuredData } from '@/components/faq-structured-data';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Fraternity Spirits México - Distribuidores Premium de Destilados | Tequila, Mezcal, Whisky',
+  description: 'La mejor distribuidora de destilados premium en México. Importamos tequila, mezcal, whisky y ginebra de marcas exclusivas para restaurantes y bares. Desde 2015 conectando México con los mejores destilados del mundo.',
+  keywords: 'destilados premium México, distribuidor tequila México, importador whisky México, mezcal premium, ginebra artesanal, spirits México, distribuidora licores, restaurantes bares México, Fraternity Spirits',
+  authors: [{ name: 'Fraternity Spirits México' }],
+  creator: 'Fraternity Spirits México',
+  publisher: 'Fraternity Spirits México',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://fraternityspiritsmexico.com',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_MX',
+    url: 'https://fraternityspiritsmexico.com',
+    title: 'Fraternity Spirits México - Distribuidores Premium de Destilados',
+    description: 'La mejor distribuidora de destilados premium en México. Marcas exclusivas para restaurantes y bares desde 2015.',
+    siteName: 'Fraternity Spirits México',
+    images: [
+      {
+        url: '/logos/FSlogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Fraternity Spirits México - Destilados Premium',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fraternity Spirits México - Distribuidores Premium de Destilados',
+    description: 'La mejor distribuidora de destilados premium en México. Marcas exclusivas desde 2015.',
+    images: ['/logos/FSlogo.png'],
+  },
+};
 
 const featuredSpirits = spirits.slice(0, 3);
 const testimonials = [
@@ -26,7 +64,10 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col overflow-x-hidden">
+    <>
+      <BusinessStructuredData page="home" />
+      <FAQStructuredData />
+      <div className="flex flex-col overflow-x-hidden">
       <section className="relative h-[85vh] md:h-[90vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60 z-10" />
         
@@ -65,8 +106,8 @@ export default function Home() {
           </h1>
           
           <p className="max-w-4xl mx-auto text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed">
-            Conectamos marcas globales excepcionales con conocedores locales, 
-            curando una experiencia única en destilados premium para México
+            <strong>Distribuidores líderes en México</strong> de tequila, mezcal, whisky y ginebra premium. 
+            Conectamos marcas globales excepcionales con restaurantes, bares y conocedores mexicanos desde 2015.
           </p>
           
           {/* Dual CTA with different priorities */}
@@ -93,8 +134,9 @@ export default function Home() {
               Nuestra Pasión por la Excelencia
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-              Nuestra dedicación a las bebidas espirituosas e innovación nos ha convertido 
-              en el puente entre tradiciones destilatorias excepcionales y conocedores mexicanos
+              <strong>Líderes en importación y distribución de destilados premium en México.</strong> 
+              Nuestra dedicación a las bebidas espirituosas de calidad nos ha convertido 
+              en el puente entre las mejores destilerías del mundo y restaurantes, bares y conocedores mexicanos.
             </p>
           </div>
           
@@ -103,27 +145,27 @@ export default function Home() {
               <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Award className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Apasionada Selección</h3>
-              <p className="text-muted-foreground mb-4">Seleccionamos cada destilado por su calidad, historia y carácter excepcional</p>
-              <div className="text-sm text-primary font-medium">Marcas globales selectas</div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Selección Premium</h3>
+              <p className="text-muted-foreground mb-4">Importamos y distribuimos los mejores tequilas, mezcales, whiskies y ginebras para el mercado mexicano</p>
+              <div className="text-sm text-primary font-medium">Marcas exclusivas internacionales</div>
             </div>
             
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <GraduationCap className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Innovación y Tradición</h3>
-              <p className="text-muted-foreground mb-4">Celebramos las tradiciones destilatorias mientras abrazamos la innovación</p>
-              <div className="text-sm text-primary font-medium">10+ años de experiencia</div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Experiencia en México</h3>
+              <p className="text-muted-foreground mb-4">Distribuidores especializados con más de 10 años conectando México con destilados excepcionales</p>
+              <div className="text-sm text-primary font-medium">Líderes desde 2015</div>
             </div>
             
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Truck className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Experiencia Curada</h3>
-              <p className="text-muted-foreground mb-4">Ofrecemos una experiencia única para verdaderos entusiastas y conocedores</p>
-              <div className="text-sm text-primary font-medium">Calidad garantizada</div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Servicio Profesional</h3>
+              <p className="text-muted-foreground mb-4">Atendemos restaurantes, bares y hoteles en toda la República Mexicana con distribución especializada</p>
+              <div className="text-sm text-primary font-medium">Cobertura nacional</div>
             </div>
           </div>
         </div>
@@ -274,8 +316,8 @@ export default function Home() {
             </h2>
             
             <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
-              Descubre la diferencia de trabajar con distribuidores apasionados. 
-              Conectamos a conocedores con destilados excepcionales que celebran la tradición y abrazan la innovación.
+              Descubre la diferencia de trabajar con los <strong>mejores distribuidores de destilados premium en México</strong>. 
+              Desde 2015 conectamos restaurantes y bares con tequilas, mezcales, whiskies y ginebras excepcionales.
             </p>
             
             {/* Feature highlights */}
@@ -337,6 +379,7 @@ export default function Home() {
         </div>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 }
